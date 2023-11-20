@@ -27,7 +27,11 @@ public class BasicUserAccount implements UserAccount {
 
     @Override
     public String toString() {
-        return " login: " + login +
-                "\n password: " + password;
+        if(login== null && password == null) {
+            return "Account has been deleted";
+        }else{
+            return " login: " + login +
+                    "\n password: " + password;
+        }
     }
 }
